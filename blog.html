@@ -6,7 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    href="bootstrap-offline/css/bootstrap.css"
+    rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap CSS -->
@@ -25,99 +27,114 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="image/logo/logo.png" height="30" width="140%" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon">
-                        <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                        <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                        <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About
-                                Us</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="our team.html">Our Team</a></li>
-                                <li><a class="dropdown-item" href="mission-statement.html">Our Mission</a></li>
-                                <li><a class="dropdown-item" href="FAQs.html">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg bg-white">
+          <div class="container ">
+            <a class="navbar-brand text-black" href="#">Location: .</a>
+            <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About
+                    Us</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="our team.html">Our Team</a></li>
+                    <li><a class="dropdown-item" href="mission-statement.html">Our Mission</a></li>
+                    <li><a class="dropdown-item" href="FAQs.html">FAQs</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
-    </header>
+    
+        <nav class="navbar navbar-expand-lg bg-blue">
+          <div class="container">
+            <a class="navbar-brand" href="#"><img src="image/logo/logo.png" height="30" width="140%" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon">
+                <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
+                <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
+                <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About
+                    Us</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="our team.html">Our Team</a></li>
+                    <li><a class="dropdown-item" href="mission-statement.html">Our Mission</a></li>
+                    <li><a class="dropdown-item" href="FAQs.html">FAQs</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 
-    <section class="hero" id="hero">
+      <section class="hero" id="hero">
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            </div>
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="carousel-background">
-                        <img src="image/slider/slider_1.jpg" alt="">
-                        <div class="carousel-container">
-                            <div class="carousel-content-container">
-                                <h2>Blog</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem sint minus
-                                    dolorum voluptates vitae suscipit molestiae, ipsam deserunt labore tenetur iure nemo
-                                    numquam esse corporis molestias veritatis libero facere.</p>
-                                <div class="buttons">
-                                    <a href="#courses" class="button-1">Our Programs</a>
-                                    <a href="application.html" class="button-2">Apply Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          </div>
+      
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-background">
+                <img src="image/slider/slider_1.jpg" alt="">
+                <div class="carousel-container">
+                  <div class="carousel-content-container">
+                    <h2>Explore Our Blog</h2>
+                    <p>Discover the latest insights, news, and stories in our blog. Stay informed and engaged with our
+                      community.</p>
+                  </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="carousel-background">
-                        <img src="image/slider/slier_2.jpg" alt="">
-                        <div class="carousel-container">
-                            <div class="carousel-content-container">
-                                <h2>Self Preform Expertise</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem sint minus
-                                    dolorum voluptates vitae suscipit molestiae, ipsam deserunt labore tenetur iure nemo
-                                    numquam esse corporis molestias veritatis libero facere.</p>
-                                <div class="buttons">
-                                    <a href="" class="button-1">Our Programs</a>
-                                    <a href="" class="button-2">Apply Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="carousel-background">
+                <img src="image/slider/slier_2.jpg" alt="">
+                <div class="carousel-container">
+                  <div class="carousel-content-container">
+                    <h2>Dive into Knowledge</h2>
+                    <p>Immerse yourself in a world of knowledge and information. Our blog is a source of valuable insights
+                      and updates.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <section class="about mt-5" style="font-family: 'Rubik',sans-serif;">
         <div class="container-fluid">
@@ -125,7 +142,7 @@
                 <h2 class="text-center" style="font-family: 'Rubik', sans-serif;">Our Recent Posts</h2>
             </div>
             <div class="row mt-5">
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <img src="image/blog/software_blog.jpg" class="img-fluid">
                     <div class="about-content">
                         <h2>Arrow Functions In React JS</h2>
@@ -139,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <img src="image/blog/mining_blog.jpg" class="img-fluid">
                     <div class="about-content">
                         <h2>How To Dress Like A Miner</h2>
@@ -153,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <img src="image/blog/electrical_blog.jpg" class="img-fluid">
                     <div class="about-content">
                         <h2>How To Build An Automated Robot</h2>
@@ -167,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <img src="image/blog/cybersecurity_blog.jpg" class="img-fluid">
                     <div class="about-content">
                         <h2>How To Identify A Phishing Link</h2>
@@ -181,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 mt-5">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <img src="image/blog/electric_tools.jpg" class="img-fluid">
                     <div class="about-content">
                         <h2>Electrical Tools And Their Uses</h2>
@@ -195,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 mt-5">
+                <div class="col-sm-6 col-md-6 col-lg-4">
                     <img src="image/blog/blockchain_blog.jpg" class="img-fluid">
                     <div class="about-content">
                         <h2>What Is Blockchain Development</h2>
@@ -209,35 +226,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 mt-5">
-                    <img src="image/blog/civil_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>What Is Controlled Demolition</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
-                            aliquam amet deserunt
-                            exercitationem nam officiis. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-3 mt-5">
-                    <img src="image/blog/networking_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>How To Configure A Router</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
-                            aliquam amet deserunt
-                            exercitationem nam officiis. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+               
+                
             <div class="buttons text-center mt-5">
                 <a href="" class="button-3">See Other Posts <i class="bi bi-arrow-right"></i></a>
             </div>
@@ -292,7 +282,7 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
                         <p><i class="bi bi-facebook"></i> Ebenezer University</p>
