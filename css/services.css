@@ -1,0 +1,169 @@
+
+.bg-blue{
+    background-color: #15253f !important;
+}
+
+.bg-night{
+    background-color: #090909 !important;
+}
+
+.bg-light-blue {
+    background-color: #f0f8ff !important;
+}
+
+.bg-blue-gray {
+    background-color: #c9d4db !important;
+}
+
+.text-blue{
+    color: #15253f !important;
+}
+
+.text-night{
+    color: #090909 !important;
+}
+
+.text-light-blue {
+    color: #f0f8ff !important;
+}
+
+.text-blue-gray {
+    color: #c9d4db !important;
+}
+
+.footer-container {
+    width: 100vw;
+}
+
+ul, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer a {
+    color: #c9d4db;
+    transition: 300ms;
+}
+
+.footer a:hover {
+    color: #f0f8ff;
+    transform: scale(3);
+}
+
+.footer-sections a{
+    color: #090909;
+    transition: all linear;
+}
+
+.footer-sections a:hover{
+    color: #15253f;
+    text-shadow: 2px 2px 2px #c9d4db;
+}
+
+.modal-width {
+    width: auto;
+    height: auto;
+}
+
+.bg-services {
+    background-image: linear-gradient(#15255333,#15255333), url("./../images/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+.line-height{
+    line-height: 1;
+}
+
+
+.card {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.card .fas.fa-arrow-right {
+    position: absolute;
+    bottom: -100px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* color: gold; */
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 0.5s ease;
+}
+
+.card:hover .fas.fa-arrow-right {
+    bottom: 0px;
+    opacity: 1;
+}
+
+.card .fas.fa-school,
+.card .fas.fa-hospital,
+.card .fas.fa-money-bill,
+.card .fas.fa-plane-departure,
+.card .fas.fa-code,
+.card .fas.fa-business-time,
+.card .fas.fa-hands-helping {
+    font-size: 40px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f0f8ff;
+}
+
+.card .h4 {
+    font-weight: 700;
+}
+
+
+.card:hover .fas.fa-school,
+.card:hover .fas.fa-money-bill,
+.card:hover .fas.fa-hospital,
+.card:hover .fas.fa-plane-departure,
+.card:hover .fas.fa-code,
+.card:hover .fas.fa-business-time,
+.card:hover .fas.fa-hands-helping {
+    color: #15255f;
+    background-color: #c9d4db;
+}
+
+@media (max-width:990px) {
+    .container .content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    body {
+        padding: 25px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .content {
+        padding: 25px;
+    }
+}

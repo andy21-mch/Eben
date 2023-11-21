@@ -48,7 +48,7 @@
                         id="collapsibleNavbar1">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
+                                <a class="nav-link" href="blog.php">Blog</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"
@@ -65,7 +65,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact
+                                <a class="nav-link" href="contact.php">Contact
                                     Us</a>
                             </li>
                         </ul>
@@ -99,7 +99,7 @@
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
+                                <a class="nav-link" href="blog.php">Blog</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"
@@ -116,7 +116,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact
+                                <a class="nav-link" href="contact.php">Contact
                                     Us</a>
                             </li>
                         </ul>
@@ -125,174 +125,118 @@
             </nav>
         </header>
 
-        <section class="hero" id="hero">
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo"
-                        data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo"
-                        data-bs-slide-to="1"></button>
-                </div>
-
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel-background">
-                            <img src="image/slider/slider_1.jpg" alt>
-                            <div class="carousel-container">
-                                <div class="carousel-content-container">
-                                    <h2>Contact Us</h2>
-                                    <p>If you have any questions or inquiries,
-                                        feel free to get in touch with us. We're
-                                        here to help you! Explore our programs
-                                        and start your journey with Ebenezer
-                                        University.</p>
-                                    <div class="buttons">
-                                        <a href="#courses"
-                                            class="btn btn-primary">Discover
-                                            Programs</a>
-                                        <a href="application.html"
-                                            class="btn btn-secondary">Apply Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-background">
-                            <img src="image/slider/slier_2.jpg" alt>
-                            <div class="carousel-container">
-                                <div class="carousel-content-container">
-                                    <h2>Unlock Your Potential</h2>
-                                    <p>At Ebenezer University, we believe in
-                                        empowering individuals to achieve their
-                                        highest potential. Join us in a journey
-                                        of self-discovery and expertise
-                                        development.</p>
-                                    <div class="buttons">
-                                        <a href="#" class="btn btn-primary">Explore
-                                            Programs</a>
-                                        <a href="#" class="btn btn-secondary">Apply
-                                            Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Left and right controls/icons -->
-                    <button class="carousel-control-prev" type="button"
-                        data-bs-target="#demo" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button"
-                        data-bs-target="#demo" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Container for Contact Section -->
-        <div class="container">
-
-            <!-- Section: Contact -->
-            <section class="mb-5">
-
-                <!-- Section heading -->
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Contact
-                    Us</h2>
-                <!-- Section description -->
-                <p class="text-center w-responsive mx-auto mb-5">Have questions
-                    or suggestions? Feel free to reach out to us. Our team is
-                    here to assist you promptly.</p>
-
-                <div class="row">
-
-                    <!-- Contact Form -->
-                    <div class="col-md-8 mb-md-0 mb-5">
-                        <form id="contact-form" name="contact-form"
-                            action="mail.php" method="POST">
-
-                            <!-- Grid row -->
-                            <div class="row">
-
-                                <!-- Name input -->
-                                <div class="col-md-6">
-                                    <div class="md-form mb-4">
-                                        <input type="text" id="name" name="name"
-                                            class="form-control">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-
-                                <!-- Email input -->
-                                <div class="col-md-6">
-                                    <div class="md-form mb-4">
-                                        <input type="text" id="email"
-                                            name="email" class="form-control">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- Grid row -->
-
-                            <!-- Subject input -->
-                            <div class="md-form mb-4">
-                                <input type="text" id="subject" name="subject"
-                                    class="form-control">
-                                <label for="subject">Subject</label>
-                            </div>
-
-                            <!-- Message input -->
-                            <div class="md-form mb-4">
-                                <textarea type="text" id="message"
-                                    name="message" rows="3"
-                                    class="form-control md-textarea"></textarea>
-                                <label for="message">Your Message</label>
-                            </div>
-
-                            <div class="text-center text-md-left">
-                                <button type="submit"
-                                    class="btn btn-primary btn-block">Send</button>
-                            </div>
-                        </form>
-
-                        <!-- Status message -->
-                        <div class="status mt-2"></div>
-                    </div>
-                    <!-- Contact Form -->
-
-                    <!-- Contact Information -->
-                    <div class="col-md-4 text-center">
-                        <ul class="list-unstyled mb-0">
-                            <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                                <p>Cameroon - Sonac Street</p>
-                            </li>
-
-                            <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                                <p>+237 6816 10898</p>
-                            </li>
-
-                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                                <p>contact@ebenezerinstitute.com</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Contact Information -->
-
-                </div>
-
-            </section> 
+        <div class="container-fluid bg-services text-center p-5 text-light-blue">
+            <h1>Contact Us</h1>
         </div>
+
+        <main id="main">
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+                <div class="container">
+
+                    <div class="section-title">
+                        <p>Our team is ready to implement your ideas.
+                            Contact us now to discuss your roadmap!</p>
+                    </div>
+
+                    <div>
+                        <iframe style="border:0; width: 100%; height: 270px;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.01476812689398!2d10.167011561836555!3d5.962153896081931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105f16088ef74b0d%3A0x1af7cdce9354f007!2sVILEN%20PHARMACY!5e0!3m2!1sen!2scm!4v1661965326468!5m2!1sen!2scm"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="row mt-5">
+
+                        <div class="col-lg-4">
+                            <div class="info">
+                                <div class="address">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h4>Location:</h4>
+                                    <p>Vilen Pharmacy | Ghana street, Bamenda |
+                                        NW | Cameroon</p>
+                                </div>
+
+                                <div class="email">
+                                    <i class="bi bi-envelope"></i>
+                                    <h4>Email:</h4>
+                                    <p>admin@skye8.tech</p>
+                                </div>
+
+                                <div class="phone">
+                                    <i class="bi bi-phone"></i>
+                                    <h4>Call:</h4>
+                                    <p>(+237) 672 269 760</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-8 mt-5 mt-lg-0">
+
+                            <form action="src/backend/useraction.php"
+                                method="POST">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" name="name"
+                                            class="form-control" id="name"
+                                            placeholder="Your Name" required>
+                                    </div>
+                                    <div
+                                        class="col-md-6 form-group mt-3 mt-md-0">
+                                        <input type="email" class="form-control"
+                                            name="email" id="email"
+                                            placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control"
+                                        name="subject" id="subject"
+                                        placeholder="Subject" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea class="form-control"
+                                        name="message" rows="5"
+                                        placeholder="Message" required></textarea>
+                                </div>
+
+                                <button type="submit" name="contact-submit"
+                                    class="btn btn-success mt-3">Send Message</button>
+                            </form>
+
+                            <div class="my-3">
+                                <?php
+                                if(isset($_SESSION['message'])){
+                                ?>
+                                <div class="alert alert-success" role="alert">
+                                    <?php echo $_SESSION['message']; ?>
+                                    <?php unset($_SESSION['message']); ?>
+
+                                </div>
+                                <?php
+                                }
+                                if(isset($_SESSION['error'])){
+                                ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <?php echo $_SESSION['error']; ?>
+                                    <?php unset($_SESSION['error']); ?>
+                                </div>
+                                <?php
+                                }
+                                ?>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section><!-- End Contact Section -->
+
             <footer
                 class="text-center text-lg-start pt-4 text-white mt-5">
-                <!-- Section: Social media -->
-
-                <!-- Section: Social media -->
 
                 <!-- Section: Links  -->
                 <section class>
