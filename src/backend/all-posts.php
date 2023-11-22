@@ -70,7 +70,7 @@ $posts = $blogpost->getAllPosts();
                 <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar2">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.php">Blog</a>
@@ -124,6 +124,8 @@ $posts = $blogpost->getAllPosts();
                             </thead>
                             <tbody>
                                 <?php
+                                 if (is_array($posts)) {
+
 
                                 $perPage = 5; // Messages per page
                                 $totalMessages = count($posts);
@@ -170,7 +172,13 @@ $posts = $blogpost->getAllPosts();
                                             </div>
                                         </td>
                                     </tr>
-                                <?php endfor; ?>
+                                <?php endfor; 
+                                 }
+                                else {
+                                    echo $posts;
+                                }
+                                
+                                ?>
                             </tbody>
                         </table>
 

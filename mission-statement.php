@@ -32,99 +32,11 @@
     </head>
 
     <body>
-        <header>
-            <!-- Location and Phone Navigation Bar -->
-            <nav class="navbar navbar-expand-lg bg-white">
-                <div class="container">
-                    <a class="navbar-brand text-black" href="#">
-                        <i class="fas fa-map-marker-alt"></i> Bamenda - Sonac
-                        Street
-                    </a>
-                    <a class="navbar-brand text-black" href="#">
-                        <i class="fas fa-phone"></i> +237681610898
-                    </a>
-                    <div
-                        class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block"
-                        id="collapsibleNavbar1">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.php">Blog</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"
-                                    role="button"
-                                    data-bs-toggle="dropdown">About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item"
-                                            href="our team.html">Our Team</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="mission-statement.html">Our
-                                            Mission</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="FAQs.html">FAQs</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.php">Contact
-                                    Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <?php 
 
-            <!-- Logo Navigation Bar -->
-            <nav class="navbar navbar-expand-lg bg-blue">
-                <div class="container">
-                    <a class="navbar-brand" href="#"><img
-                            src="image/logo/logo.png"
-                            height="30" width="140%" alt></a>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavbar2">
-                        <span class="navbar-toggler-icon">
-                            <p
-                                style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                            <p
-                                style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                            <p
-                                style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                        </span>
-                    </button>
-                    <div
-                        class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block"
-                        id="collapsibleNavbar2">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.php">Blog</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"
-                                    role="button"
-                                    data-bs-toggle="dropdown">About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item"
-                                            href="our team.html">Our Team</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="mission-statement.html">Our
-                                            Mission</a></li>
-                                    <li><a class="dropdown-item"
-                                            href="FAQs.html">FAQs</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.php">Contact
-                                    Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        include 'header.php'
 
+        ?>
         <!-- Hero Section for Mission -->
         <section class="hero" id="mission-hero">
             <div id="mission-carousel" class="carousel slide"
@@ -158,7 +70,7 @@
                                         <a href="#courses"
                                             class="btn btn-success btn-lg">Explore
                                             Programs</a>
-                                        <a href="application.html"
+                                        <a href="application.php"
                                             class="btn btn-secondary btn-lg">Apply
                                             Now</a>
                                     </div>
@@ -185,7 +97,7 @@
                                         <a href="#courses"
                                             class="btn btn-success btn-lg">Explore
                                             Programs</a>
-                                        <a href="application.html"
+                                        <a href="application.php"
                                             class="btn btn-secondary btn-lg">Apply
                                             Now</a>
                                     </div>
@@ -208,45 +120,11 @@
         </section>
         <!-- End Hero Section for Mission -->
 
-        <section class="about mt-5 mb-5">
-            <div class="container-fluid">
-                <div class="row mt-5 mb-5">
-                    <h2 class="text-center">About Us</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 d-none d-lg-flex">
-                        <img src="image/about/about.jpg" class="img-fluid">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="about-content">
-                            <h2>Welcome to Ebenezer University</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Recusandae iste, atque magnam
-                                molestiae vel tempore. Ipsum, illum magni
-                                quaerat recusandae placeat eveniet impedit,
-                                excepturi facilis voluptatum fugiat quam, esse
-                                suscipit!</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Inventore, suscipit itaque
-                                ipsa,
-                                voluptas corrupti atque iure commodi porro ex
-                                aperiam ab maxime delectus, optio facilis
-                                deleniti deserunt est mollitia culpa? Aperiam
-                                quam voluptas dicta provident velit molestias?
-                                Blanditiis impedit aut nemo maxime earum quo
-                                nobis, id illum eum, deleniti tempora quam
-                                repudiandae omnis dolor non dolorum delectus,
-                                alias ducimus! Eos.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Illum a cupiditate ex voluptas
-                                laudantium,
-                                quaerat incidunt minus tenetur cum
-                                eligendi?Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php 
+
+        include 'about-section.php';
+
+        ?>
 
         <section class="about mt-5 mb-5">
             <div class="container-fluid">
@@ -424,6 +302,8 @@
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
     </body>
 
 </html>

@@ -1,3 +1,12 @@
+<?php
+
+include 'src/backend/User.php';
+include 'src/backend/Blog.php';
+$blogpost = new Blog();
+$user = new User();
+$posts = $blogpost->getAllPosts();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,83 +30,64 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
 
     <!-- Custom CSS -->
+
+    <style>
+        .fixed-image {
+            max-width: 100%;
+            /* Ensures the image doesn't exceed its parent container */
+            height: 400px;
+            /* Allows the height to adjust proportionally based on the width */
+            width: 400px;
+            /* Set your desired width */
+            max-height: 300px;
+            /* Set your maximum desired height */
+            object-fit: cover;
+
+
+        }
+
+
+        .about-content {
+            padding: 15px;
+            background-color: #fff;
+            /* Set the initial background color */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            /* Add smooth transition */
+        }
+
+        .img-container {
+            overflow: hidden;
+            /* Ensure the image doesn't overflow */
+        }
+
+        .img-container img {
+            transition: transform 0.5s ease;
+            /* Add smooth transition for the image */
+        }
+
+        .img-container:hover img {
+            transform: scale(1.1);
+            /* Zoom in by 10% on hover */
+        }
+
+        .about-content:hover {
+            background-color: #f4f4f4;
+            /* Change the background color on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Add a box shadow on hover */
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
 
     <title>Ebenezer University</title>
 </head>
 
 <body>
-    <header>
-        <!-- Location and Phone Navigation Bar -->
-        <nav class="navbar navbar-expand-lg bg-white">
-            <div class="container">
-                <a class="navbar-brand text-black" href="#">
-                    <i class="fas fa-map-marker-alt"></i> Bamenda - Sonac Street
-                </a>
-                <a class="navbar-brand text-black" href="#">
-                    <i class="fas fa-phone"></i> +237681610898
-                </a>
-                <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar1">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.php">Blog</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About
-                                Us</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="our team.html">Our Team</a></li>
-                                <li><a class="dropdown-item" href="mission-statement.html">Our
-                                        Mission</a></li>
-                                <li><a class="dropdown-item" href="FAQs.html">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <?php
 
-        <!-- Logo Navigation Bar -->
-        <nav class="navbar navbar-expand-lg bg-blue">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="image/logo/logo.png" height="30" width="140%" alt></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar2">
-                    <span class="navbar-toggler-icon">
-                        <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                        <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                        <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
-                    </span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar2">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.php">Blog</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About
-                                Us</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="our team.html">Our Team</a></li>
-                                <li><a class="dropdown-item" href="mission-statement.html">Our
-                                        Mission</a></li>
-                                <li><a class="dropdown-item" href="FAQs.html">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    include 'header.php'
+
+        ?>
     <section class="hero" id="hero">
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -154,169 +144,52 @@
             <div class="row">
                 <h2 class="text-center" style="font-family: 'Rubik', sans-serif;">Our Recent Posts</h2>
             </div>
-            <div class="row mt-5">
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <img src="image/blog/software_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>Arrow Functions In React JS</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style="color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                            nesciunt pariatur
-                            consectetur adipisci. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <img src="image/blog/mining_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>How To Dress Like A Miner</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                            nesciunt pariatur
-                            consectetur adipisci. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <img src="image/blog/electrical_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>How To Build An Automated Robot</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
-                            nesciunt pariatur
-                            consectetur adipisci. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <img src="image/blog/cybersecurity_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>How To Identify A Phishing Link</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
-                            aliquam amet deserunt
-                            exercitationem nam officiis. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <img src="image/blog/electric_tools.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>Electrical Tools And Their Uses</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
-                            aliquam amet deserunt
-                            exercitationem nam officiis. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-4">
-                    <img src="image/blog/blockchain_blog.jpg" class="img-fluid">
-                    <div class="about-content">
-                        <h2>What Is Blockchain Development</h2>
-                        <span class="text-secondary">by James</span>
-                        <p><i class="bi bi-alarm" style=" color: #336233;"></i> 30 Minutes ago</p>
-                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
-                            aliquam amet deserunt
-                            exercitationem nam officiis. Lorem ipsum dolor sit amet consectetur.</p>
-                        <div class="buttons">
-                            <a href="" class="button-3">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
 
 
-                <div class="buttons text-center mt-5">
-                    <a href="" class="button-3">See Other Posts <i class="bi bi-arrow-right"></i></a>
-                </div>
+            <div class="row mt-2 p-5">
+                <?php if (count($posts) > 0) {
+                    foreach ($posts as $post) { ?>
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="img-container">
+                                <img src="<?php echo 'src/images/' . $post['image']; ?>" class="img-fluid fixed-image">
+                            </div>
+                            <div class="about-content">
+                                <h3>
+                                    <?php echo $post['title']; ?>
+                                </h3>
+                                <span class="text-secondary">
+                                    <?php echo $user->getUserNameById($post['userid']); ?>
+                                </span>
+                                <p><i class="bi bi-alarm" style="color: #336233;"></i> 30 Minutes ago</p>
+                                <p class="text-justify">
+                                    <?php echo substr($post['content'], 0, 200) . '...'; ?>
+                                </p>
+                                <span><i class="fa fa-calendar text-success"></i>
+                                    <?php echo $post['date']; ?>
+                                </span>
+
+                                <div class="buttons">
+                                    <form action="src/backend/useraction.php" method="GET">
+                                        <input type="hidden" value="<?php echo $post['slug']; ?>" name="slug">
+                                        <button name='blog-single' class="button-3" type="submit">Read More <i
+                                                class="bi bi-arrow-right"></i>
+                                        </button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <?php }
+                } ?>
             </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-lg-start pt-4 text-white mt-5">
-        <!-- Section: Social media -->
+    <?php
 
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Ebenezer University
-                        </h6>
-                        <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Privacy</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Settings</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Terms and Conditions</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Help</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
-                        <p><i class="bi bi-facebook"></i> Ebenezer University</p>
-                        <p><i class="bi bi-twitter"></i> Ebenezer University</p>
-                        <p><i class="bi bi-linkedin"></i> Ebenezer University</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
-
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Ebenezer University</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+    include 'footer.php'
+        ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

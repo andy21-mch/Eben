@@ -90,7 +90,7 @@ if (!isset($_SESSION['username'])) {
                 <div class="collapse navbar-collapse d-sm-flex flex-row-reverse d-sm-block" id="collapsibleNavbar2">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.php">Blog</a>
@@ -124,13 +124,25 @@ if (!isset($_SESSION['username'])) {
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Total Blogs
                                 <span class="badge bg-primary">
-                                    <?php echo count($post->getAllPosts()) ?>
+                                    <?php 
+                                    if (is_array($post->getAllPosts())) {
+                                        echo count($post->getAllPosts());
+                                    } else {
+                                        echo $post->getAllPosts();
+                                    }
+                                      ?>
                                 </span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Total Comments
                                 <span class="badge bg-primary">
-                                    <?php echo count($post->getAllPosts()) ?>
+                                <?php 
+                                    if (is_array($post->getAllPosts())) {
+                                        echo count($post->getAllPosts());
+                                    } else {
+                                        echo $post->getAllPosts();
+                                    }
+                                      ?>
                                 </span>
                             </li>
                         </ul>

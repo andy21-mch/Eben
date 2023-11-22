@@ -123,8 +123,8 @@ elseif(isset($_POST['blog-delete'])){
     }
 }
 elseif(isset($_GET['blog-single'])){
-    $id = $_GET['postid'];
-     header("Location: ../../Sections/single-blog?id=$id");
+    $id = $_GET['slug'];
+     header("Location: ../../single-blog?id=$id");
 }
 elseif(isset($_POST['contact-submit'])){
     $name = $_POST['name'];

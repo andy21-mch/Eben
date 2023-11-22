@@ -23,6 +23,8 @@ a {
     text-decoration: none !important;
 }
 
+
+
 header{
     position: absolute;
     z-index: 99999;
@@ -35,6 +37,11 @@ footer {
 
 .bg-blue {
     background-color: rgb(15, 72, 41);
+}
+
+a.text-black, .text-primary {
+    color: rgb(53, 46, 3) !important;
+
 }
 
 header .nav-item .nav-link {
@@ -260,7 +267,7 @@ header .nav-item .nav-link {
     letter-spacing: 1px;
     text-transform: capitalize;
     display: inline-block;
-    padding: 20px;
+    padding: 15px;
     line-height: 1px;
     margin: 10px 10px;
     color: var(--light);
