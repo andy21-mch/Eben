@@ -1,5 +1,19 @@
 <header>
 
+    <style>
+        .navbar-nav .nav-link {
+            color: white;
+            /* Set your initial text color */
+            transition: color 0.6s ease, background-color 0.6s ease;
+            /* Add a smooth transition effect */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28a745;
+            background-color: white;
+        }
+    </style>
+
     <?php
 
     if (session_status() == PHP_SESSION_NONE) {
