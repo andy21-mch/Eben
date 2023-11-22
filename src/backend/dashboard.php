@@ -10,11 +10,14 @@ include './Blog.php';
 include './User.php';
 include './Projects.php';
 include './Categories.php';
+include './Application.php';
 
 $post = new Blog();
 $user = new User();
 $project = new Projects();
 $category = new Categories();
+$application = new Application();
+$applicationsCount = $application->countApplications();
 
 if (!isset($_SESSION['username'])) {
     // get the ip address of the user
@@ -69,7 +72,7 @@ if (!isset($_SESSION['username'])) {
                 <a class="navbar-brand text-black" href="#">
                     <i class="fas fa-phone"></i> +237681610898
                 </a>
-               
+
             </div>
         </nav>
 
@@ -95,7 +98,7 @@ if (!isset($_SESSION['username'])) {
                         <li class="nav-item">
                             <a class="nav-link" href="blog.php">Blog</a>
                         </li>
-                       
+
                         <li class="nav-item">
                             <a class="nav-link" href="contact.php">Contact Us</a>
                         </li>
@@ -124,31 +127,39 @@ if (!isset($_SESSION['username'])) {
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Total Blogs
                                 <span class="badge bg-primary">
-                                    <?php 
+                                    <?php
                                     if (is_array($post->getAllPosts())) {
                                         echo count($post->getAllPosts());
                                     } else {
                                         echo $post->getAllPosts();
                                     }
-                                      ?>
+                                    ?>
                                 </span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Total Comments
                                 <span class="badge bg-primary">
-                                <?php 
+                                    <?php
                                     if (is_array($post->getAllPosts())) {
                                         echo count($post->getAllPosts());
                                     } else {
                                         echo $post->getAllPosts();
                                     }
-                                      ?>
+                                    ?>
                                 </span>
                             </li>
                         </ul>
-                        <div class="mt-3">
-                            <a href="addblog.php" class="btn btn-success">Add Blog</a>
+                        <div class="row">
+                            <div class="mt-3 col">
+                                <a href="addblog.php" class="btn btn-success">Add Blog</a>
+                            </div>
+                            <div class="mt-3 col">
+                                <a href="all-posts.php" class="btn btn-outline-success">
+                                    <i class="bi bi-eye"></i> Manage Posts
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -165,15 +176,12 @@ if (!isset($_SESSION['username'])) {
                                     <?php echo count($category->get_categories()) ?>
                                 </span>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Total Categories
-                                <span class="badge bg-primary">
-                                    <?php echo count($category->get_categories()) ?>
-                                </span>
-                            </li>
+
                         </ul>
                         <div class="mt-3">
-                            <a href="#" class="btn btn-success">Create New</a>
+                            <a href="all-messages.php" class="btn btn-outline-success">
+                                <i class="bi bi-eye"></i> Manage Categories
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -191,97 +199,47 @@ if (!isset($_SESSION['username'])) {
                                     <?php echo count($user->getMessages()) ?>
                                 </span>
                             </li>
+                        </ul>
+                        <div class="mt-3">
+                            <a href="all-messages.php" class="btn btn-outline-success">
+                                <i class="bi bi-eye"></i> Manage Messages
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Applications</h5>
+                        <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Total Messages
+                                Total Applications
                                 <span class="badge bg-primary">
-                                    <?php echo count($user->getMessages()) ?>
+                                    <?php echo $applicationsCount; ?>
                                 </span>
                             </li>
                         </ul>
                         <div class="mt-3">
-                            <a href="#" class="btn btn-info">View Messages</a>
+                            <a href="manage-applications.php" class="btn btn-success">Manage Applications</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Actions Card -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Actions</h5>
-                        <div class="row">
-                            <!-- Manage Categories -->
-                            <div class="col-md-3">
-                                <h6>Manage Categories</h6>
-                                <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-outline-secondary">
-                                        <i class="bi bi-plus"></i> Add Category
-                                    </a>
-                                    <a href="#" class="btn btn-outline-secondary">
-                                        <i class="bi bi-eye"></i> View Categories
-                                    </a>
-                                    <!-- Add more category actions as needed -->
-                                </div>
-                            </div>
-
-                            <!-- Manage Blogs -->
-                            <div class="col-md-3">
-                                <h6>Manage Blogs</h6>
-                                <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-outline-secondary">
-                                        <i class="bi bi-plus"></i> Add Blog
-                                    </a>
-                                    <a href="all-posts.php" class="btn btn-outline-secondary">
-                                        <i class="bi bi-eye"></i> View Blogs
-                                    </a>
-                                    <!-- Add more blog actions as needed -->
-                                </div>
-                            </div>
-
-                            <!-- Manage Comments -->
-                            <div class="col-md-3">
-                                <h6>Manage Comments</h6>
-                                <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-outline-secondary">
-                                        <i class="bi bi-plus"></i> Add Comment
-                                    </a>
-                                    <a href="#" class="btn btn-outline-secondary">
-                                        <i class="bi bi-eye"></i> View Comments
-                                    </a>
-                                    <!-- Add more comment actions as needed -->
-                                </div>
-                            </div>
-
-                            <!-- Manage Messages -->
-                            <div class="col-md-3">
-                                <h6>Manage Messages</h6>
-                                <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-outline-secondary">
-                                        <i class="bi bi-plus"></i> Add Message
-                                    </a>
-                                    <a href="all-messages.php" class="btn btn-outline-secondary">
-                                        <i class="bi bi-eye"></i> View Messages
-                                    </a>
-                                    <!-- Add more message actions as needed -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <!-- General Actions Buttons -->
         <div class="row mt-4">
             <div class="col-md-12">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a href="#" class="btn btn-danger me-md-2">Logout</a>
-                    <!-- Add more general action buttons as needed -->
-                </div>
+                <form action="useraction.php" method="post">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" name="logout-submit" class="btn btn-danger me-md-2">Logout</button>
+                        <!-- Add more general action buttons as needed -->
+                    </div>
+                </form>
             </div>
         </div>
     </div>

@@ -1,3 +1,10 @@
+<?php
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+  session_start();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,118 +95,127 @@
   </section>
 
 
-  <section class="form-section p-5 w-75 m-auto">
-    <div class="text-center">
-      <h2>Application Form</h2>
-      <p>Apply with us.</p>
+  <section class="contact mt-5 mb-5" id="contact">
+    <div class="container">
+
+      <?php
+      // Check if there is a success message
+      if (isset($_SESSION['message'])) {
+        echo '<div class="alert alert-success" role="alert">' . $_SESSION['message'] . '<br> Thank you for your application! We will review it and get back to you shortly. If you have not done so already, please submit the following documents to our office:<br>
+        - GCE A Level certificate<br>
+        - Photocopy of ID<br>
+        - Transcript or other relevant documents<br>
+        You may also drop by our office to submit the documents in person. We look forward to assisting you on your educational journey.</div>';
+        // Clear the message after displaying it
+        unset($_SESSION['message']);
+      }
+      // Check if there is an error message
+      if (isset($_SESSION['error'])) {
+        echo '<div class="alert alert-danger" role="alert">' . $_SESSION['error'] . '</div>';
+        // Clear the error after displaying it
+        unset($_SESSION['error']);
+      }
+      ?>
+
+      <h2 class="text-center">Apply Now</h2>
+
+      <form action="src/backend/useraction.php" method="post" class="mt-4">
+        <div class="mb-3">
+          <label for="program" class="form-label">
+            <i class="bi bi-book"></i> Select Program:
+          </label>
+          <select class="form-select" name="program" id="program">
+            <option value="nursing">Nursing</option>
+            <option value="computer_engineering">Computer Engineering</option>
+            <option value="medical_lab_science">Medical Laboratory Science</option>
+            <option value="business_management">Business and Management</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <!-- Your Name -->
+        <!-- Your Name -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="first_name" class="form-label">
+              <i class="bi bi-person"></i> First Name:
+            </label>
+            <input type="text" class="form-control border-success border-1" name="first_name" id="first_name" value="">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="last_name" class="form-label">
+              <i class="bi bi-person"></i> Last Name:
+            </label>
+            <input type="text" class="form-control border-success border-1" name="last_name" id="last_name" value="">
+          </div>
+        </div>
+
+
+
+        <div class="mb-3">
+          <label for="email" class="form-label">
+            <i class="bi bi-envelope"></i> Your Email:
+          </label>
+          <input type="email" class="form-control border-success border-1" name="email" id="email" value="">
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">
+            <i class="bi bi-phone"></i> Your Phone Number:
+          </label>
+          <input type="tel" class="form-control border-success border-1" name="phone" id="phone" value="">
+        </div>
+
+        <div class="mb-3">
+          <label for="degree" class="form-label">
+            <i class="bi bi-award"></i> Select Degree:
+          </label>
+          <select class="form-select" name="degree" id="degree">
+            <option value="hnd">HND</option>
+            <option value="bsc">BSc</option>
+            <option value="msc">MSc</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="gender" class="form-label">
+            <i class="bi bi-gender-male"></i> Select Gender:
+          </label>
+          <select class="form-select" name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="comments" class="form-label">
+            <i class="bi bi-chat-dots"></i> Additional Comments:
+          </label>
+          <textarea class="form-control border-success border-1" name="comment" id="comments" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn form-control btn-success btn-block" name="application-submit">
+          <i class="bi bi-check-circle"></i> Submit Application
+        </button>
+
+      </form>
     </div>
-    <form>
-      <!-- 2 column grid layout with text inputs for the first and last names -->
-      <div class="row mb-4">
-        <div class="col">
-          <div class="form-group">
-            <label for="formFirstName"><i class="bi bi-person"></i> First Name</label>
-            <input type="text" id="formFirstName" class="form-control border-success"
-              placeholder="Enter your first name" />
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-group">
-            <label for="formLastName"><i class="bi bi-person"></i> Last Name</label>
-            <input type="text" id="formLastName" class="form-control border-success"
-              placeholder="Enter your last name" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Gender and Address -->
-      <div class="row mb-4">
-        <div class="col">
-          <label><i class="bi bi-gender-male"></i> Gender</label>
-          <div class="form-check">
-            <input type="radio" class="form-check-input" id="maleRadio" name="gender" value="male">
-            <label class="form-check-label" for="maleRadio">Male</label>
-          </div>
-          <div class="form-check">
-            <input type="radio" class="form-check-input" id="femaleRadio" name="gender" value="female">
-            <label class="form-check-label" for="femaleRadio">Female</label>
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-group">
-            <label for="formAddress"><i class="bi bi-house-door"></i> Address</label>
-            <input type="text" id="formAddress" class="form-control border-success" placeholder="Enter your address" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Email and Phone -->
-      <div class="row mb-4">
-        <div class="col">
-          <div class="form-group">
-            <label for="formEmail"><i class="bi bi-envelope"></i> Email</label>
-            <input type="email" id="formEmail" class="form-control border-success" placeholder="Enter your email" />
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-group">
-            <label for="formPhone"><i class="bi bi-phone"></i> Phone</label>
-            <input type="text" id="formPhone" class="form-control border-success"
-              placeholder="Enter your phone number" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Department and Level -->
-      <div class="row mb-4">
-        <div class="col">
-          <div class="form-group">
-            <label for="formDepartment"><i class="bi bi-journal-code"></i>
-              Select Department</label>
-            <select name="department" class="w-100 border-success border-1 form-select" aria-label="Select Department">
-              <option class="border-success border-1">Civil Engineering</option>
-              <option class="border-success border-1">Cybersecurity</option>
-              <option class="border-success border-1">Electrical Engineering</option>
-              <option class="border-success border-1">IT/Networking</option>
-              <option class="border-success border-1">Mineral
-                Engineering(Mining)</option>
-              <option class="border-success border-1">Software Engineering</option>
-            </select>
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-group">
-            <label for="formLevel"><i class="bi bi-badge"></i> Select Level</label>
-            <select name="level" class="w-100 border-success border-1 form-select" aria-label="Select Level">
-              <option class="border-success border-1">Level 200(Year 1)</option>
-              <option class="border-success border-1">Level 300(Year 2)</option>
-              <option class="border-success border-1">Level 400(Year 3)</option>
-              <option class="border-success border-1">Level 500(Year 4)</option>
-              <option class="border-success border-1">Level 600(Year 5)</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Checkbox -->
-      <div class="form-check d-flex justify-content-center mb-4 mt-4">
-        <input class="form-check-input border-success me-2" type="checkbox" value id="formAgreeCheck" checked />
-        <label class="form-check-label" for="formAgreeCheck"> I agree to the
-          Terms and Conditions </label>
-      </div>
-
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-success rounded-5 w-100 mb-4"><i class="bi bi-check-circle"></i>
-        Submit</button>
-    </form>
   </section>
+
+
+
   </div>
   <!-- Footer -->
   <?php
 
   include 'footer.php' ?>
-  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

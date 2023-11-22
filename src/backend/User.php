@@ -4,33 +4,36 @@
 
 require_once 'Connection.php'; //changed to require_once
 
-class User {
+class User
+{
     private $conn;
     private $username;
     private $password;
     private $password_repeat;
     private $email;
     private $fullname;
-    
-    public function __construct() {
+
+    public function __construct()
+    {
         $connection = connect();
         $this->conn = $connection;
     }
-    
-    public function logout(){
+
+    public function logout()
+    {
         //check if user is logged in
-        if(isset($_SESSION['username'])){
+        if (isset($_SESSION['username'])) {
 
             session_unset();
             session_destroy();
-           return header('Location: ./index.php');
-        }
-        else{
+            return header('Location: ./index.php');
+        } else {
             //redirect to login page
             return header('Location: ./index.php');
         }
     }
-    public function getAllUsers() {
+    public function getAllUsers()
+    {
         $sql = "SELECT * FROM users";
         $result = $this->conn->query($sql);
         $users = array();
@@ -41,8 +44,9 @@ class User {
         }
         return $users;
     }
-    
-    public function getUser($id) {
+
+    public function getUser($id)
+    {
         $sql = "SELECT * FROM users WHERE id = $id;";
         $result = $this->conn->query($sql);
         $user = array();
@@ -51,14 +55,15 @@ class User {
         }
         return $user;
     }
-    
-    public function createUser($username, $password, $email, $fullname) {
-        if($this->password != $this->password_repeat) {
+
+    public function createUser($username, $password, $email, $fullname)
+    {
+        if ($this->password != $this->password_repeat) {
             echo "Passwords do not match";
             return false;
         }
         //using prepared statements to prevent dbh injection
-        else{
+        else {
             $sql = "INSERT INTO users (username, password, email, fullname) VALUES (:username, :password, :email, :fullname)";
             $result = $this->conn->prepare($sql);
             $result->execute([
@@ -70,9 +75,10 @@ class User {
             return $result;
         }
     }
-    
 
-    public function login($username, $password) {
+
+    public function login($username, $password)
+    {
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = $this->conn->query($sql);
         $user = array();
@@ -81,47 +87,58 @@ class User {
         }
 
         $u = $this->getUserByUsername($username);
-        if(count($u)>0){
+        if (count($u) > 0) {
             $_SESSION['userid'] = $u['id'];
         }
         return $user;
     }
 
     // define setters and getters
-    public function setUsername($username) {
+    public function setUsername($username)
+    {
         $this->username = $username;
     }
-    public function getUsername() {
+    public function getUsername()
+    {
         return $this->username;
     }
 
     //set and get fullName was not created in the User class
-    public function setFullname($fullname) {
+    public function setFullname($fullname)
+    {
         $this->fullname = $fullname;
     }
-    public function getFullname() {
+    public function getFullname()
+    {
         return $this->fullname;
     }
-    public function setPassword($password) {
+    public function setPassword($password)
+    {
         $this->password = $password;
     }
-    public function getPassword() {
+    public function getPassword()
+    {
         return $this->password;
     }
-    public function setPassword_repeat($password_repeat) {
+    public function setPassword_repeat($password_repeat)
+    {
         $this->password_repeat = $password_repeat;
     }
-    public function getPassword_repeat() {
+    public function getPassword_repeat()
+    {
         return $this->password_repeat;
     }
-    public function setEmail($email) {
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
-    public function getEmail() {
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function getUserByEmail($email) {
+    public function getUserByEmail($email)
+    {
         $sql = "SELECT * FROM users WHERE email = '$email'";
         $result = $this->conn->query($sql);
         $user = array();
@@ -130,7 +147,8 @@ class User {
         }
         return $user;
     }
-    public function getUserNameById($id) {
+    public function getUserNameById($id)
+    {
         $sql = "SELECT * FROM users WHERE id = '$id'";
         $result = $this->conn->query($sql);
         $user = array();
@@ -143,7 +161,8 @@ class User {
 
     }
 
-    public function getUserByUsername($username) {
+    public function getUserByUsername($username)
+    {
         $sql = "SELECT * FROM users WHERE username = '$username'";
         $result = $this->conn->query($sql);
         $user = array();
@@ -153,7 +172,8 @@ class User {
         return $user;
     }
 
-    public function contact($name, $email, $message, $subject) {
+    public function contact($name, $email, $message, $subject)
+    {
         $sql = "INSERT INTO contacts (name, email, message) VALUES (:name, :email, :message)";
         $result = $this->conn->prepare($sql);
         $result->execute([
@@ -161,24 +181,23 @@ class User {
             ':email' => $email,
             ':message' => $message
         ]);
-        
-        if($result){
-            $headers = "From: ".$email;
+
+        if ($result) {
+            $headers = "From: " . $email;
             $to = "nfonandrew73@gmail.com";
-            $txt = "You have received an email from ".$name.".\n\n".$message;
-			if(mail($to,$subject,$txt,$headers)){
-				return true;
-			}
-			else{
-				return false;
-			}
-        }
-        else{
+            $txt = "You have received an email from " . $name . ".\n\n" . $message;
+            if (mail($to, $subject, $txt, $headers)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
             return false;
         }
     }
 
-    public function getMessages() {
+    public function getMessages()
+    {
         $sql = "SELECT * FROM contacts";
         $result = $this->conn->query($sql);
         $messages = array();
@@ -191,11 +210,12 @@ class User {
     }
 
     //validation to ensure no tooo emails are stored in the database by first querying to see if it exist before inserting
-    public function subscribeToNewsletter($email) {
+    public function subscribeToNewsletter($email)
+    {
         $query = "SELECT * FROM newsletter WHERE email ='$email'";
         $exists = $this->conn->query($query);
 
-        if($exists->rowCount() > 0){
+        if ($exists->rowCount() > 0) {
             return false;
             die("Email already exists");
         }
@@ -207,5 +227,4 @@ class User {
         ]);
         return $result;
     }
-
 }

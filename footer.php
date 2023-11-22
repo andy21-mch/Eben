@@ -12,16 +12,15 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Ebenezer Higher Institure of Science and Technology
+                        Ebenezer Higher Institute of Science and Technology
                     </h6>
                     <p>
-                        Here you can use rows and columns to
-                        organize your footer
-                        content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing
-                        elit.
+                        Welcome to Ebenezer Higher Institute of Science and Technology. We are committed to providing
+                        quality education and fostering a vibrant learning community. Explore our programs and discover the opportunities that await
+                        you.
                     </p>
                 </div>
+
                 <!-- Grid column -->
 
                 <!-- Grid column -->
@@ -70,8 +69,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2023 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Ebenezer
-            University</a>
+        <a class="text-reset fw-bold" href="https:skye8.tech">Skye8</a>
     </div>
     <!-- Copyright -->
 </footer>
@@ -93,4 +91,3 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
