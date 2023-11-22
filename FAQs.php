@@ -23,7 +23,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Ebenezer University</title>
+    <title>Ebenezer Higher Institure of Science and Technology</title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                         <div class="carousel-container">
                             <div class="carousel-content-container">
                                 <h2>Frequently Asked Questions (FAQs)</h2>
-                                <p>Welcome to Ebenezer University, where we strive to provide answers to your most
+                                <p>Welcome to Ebenezer Higher Institure of Science and Technology, where we strive to provide answers to your most
                                     common questions. If you have any inquiries or need further clarification, feel free
                                     to explore our programs or start your application process.</p>
                                 <div class="buttons">
@@ -68,7 +68,7 @@
                         <div class="carousel-container">
                             <div class="carousel-content-container">
                                 <h2>Self-Performing Expertise</h2>
-                                <p>Discover the power of self-performing expertise at Ebenezer University. Our
+                                <p>Discover the power of self-performing expertise at Ebenezer Higher Institure of Science and Technology. Our
                                     commitment to excellence ensures a learning environment where you can excel and
                                     achieve your goals. Explore our programs and start your journey with us today.</p>
                                 <div class="buttons">
@@ -117,7 +117,7 @@
                     </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Ebenezer University is
+                    <div class="accordion-body">Ebenezer Higher Institure of Science and Technology is
                         located in the heart of Bamenda on Sonac Street. Our
                         campus provides a
                         serene and conducive environment for academic
@@ -135,7 +135,7 @@
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Yes, Ebenezer University
+                    <div class="accordion-body">Yes, Ebenezer Higher Institure of Science and Technology
                         offers a range of MSc programs designed to meet the
                         evolving needs of
                         students in various fields. Explore our academic
@@ -155,7 +155,7 @@
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Ebenezer University is
+                    <div class="accordion-body">Ebenezer Higher Institure of Science and Technology is
                         committed to providing diverse educational
                         opportunities. Yes, we offer
                         Higher National Diploma (HND) programs in
@@ -174,7 +174,7 @@
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">At Ebenezer University, we
+                    <div class="accordion-body">At Ebenezer Higher Institure of Science and Technology, we
                         encourage students to engage in a variety of
                         extracurricular
                         activities, including sports, cultural events, and
@@ -195,7 +195,7 @@
                 <div id="flush-collapseFive" class="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">To apply for admission to
-                        Ebenezer University, visit our official website and
+                        Ebenezer Higher Institure of Science and Technology, visit our official website and
                         navigate to the
                         admissions section. Follow the outlined steps and
                         submit the required documents for consideration. Our

@@ -23,7 +23,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>Ebenezer University</title>
+    <title>Ebenezer Higher Institure of Science and Technology</title>
 </head>
 
 <body>

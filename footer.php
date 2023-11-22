@@ -12,7 +12,7 @@
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Ebenezer University
+                        Ebenezer Higher Institure of Science and Technology
                     </h6>
                     <p>
                         Here you can use rows and columns to

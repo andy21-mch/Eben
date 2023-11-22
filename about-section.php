@@ -9,8 +9,8 @@
             </div>
             <div class="col-md-6">
                 <div class="about-content">
-                    <h2>Welcome to Ebenezer University</h2>
-                    <p>At Ebenezer University, we are dedicated to
+                    <h2>Welcome to Ebenezer Higher Institure of Science and Technology</h2>
+                    <p>At Ebenezer Higher Institure of Science and Technology, we are dedicated to
                         providing a holistic and transformative
                         educational experience. Our
                         institution is rooted in a rich history of

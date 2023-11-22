@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
 
-  <!-- Bootstrap JavaScript (bundle includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JavaScript (bundle includes Popper) -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./css/style.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./css/style.css">
 
-  <title>Ebenezer University</title>
+  <title>Ebenezer Higher Institure of Science and Technology</title>
 </head>
 
 <body>
@@ -105,7 +110,7 @@
         </div>
         <div class="col-md-6">
           <div class="about-content">
-            <h2>Welcome to Ebenezer University</h2>
+            <h2>Welcome to Ebenezer Higher Institure of Science and Technology</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Recusandae iste, atque magnam
               molestiae vel tempore. Ipsum, illum magni quaerat recusandae
@@ -142,8 +147,8 @@
             <img src="image/our team/chancellor.jpg" width="100%" height="320">
           </div>
           <div class="team-info mt-4">
-            <h4>Prof. Charles Xavier</h4>
-            <p>Chancellor</p>
+            <h4>Dr. Mbi epse Ojong Alice</h4>
+            <p>Director</p>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4">
@@ -169,8 +174,8 @@
             <img src="image/our team/Registrar.jpg" width="100%" height="320">
           </div>
           <div class="team-info mt-4">
-            <h4>Dr. Scott Barnes(PhD)</h4>
-            <p>Registrar</p>
+            <h4>Engr. Nfon Andrew T.(B.Eng)</h4>
+            <p>HOD - Computer Department</p>
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-4">
@@ -196,78 +201,9 @@
       </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-lg-start pt-4 text-white mt-5">
-    <!-- Section: Social media -->
+  <?php 
 
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class>
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Ebenezer University
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Privacy</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Terms and Conditions</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Follow Us</h6>
-            <p><i class="bi bi-facebook"></i> Ebenezer University</p>
-            <p><i class="bi bi-twitter"></i> Ebenezer University</p>
-            <p><i class="bi bi-linkedin"></i> Ebenezer University</p>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2023 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Ebenezer
-        University</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+  include 'footer.php';  ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

@@ -56,7 +56,7 @@ $categories = $category->get_categories();
 
 		}
 	</style>
-	<title>Ebenezer University</title>
+	<title>Ebenezer Higher Institure of Science and Technology</title>
 </head>
 
 <body>
