@@ -1,31 +1,29 @@
-
 <header>
 
-<?php 
+    <?php
 
-if (session_status() == PHP_SESSION_NONE) {
-    // Start the session
-    session_start();
-}
-?>
+    if (session_status() == PHP_SESSION_NONE) {
+        // Start the session
+        session_start();
+    }
+    ?>
 
-<!-- Location and Phone Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-white">
+    <!-- Location and Phone Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-white d-none d-lg-block">
         <div class="container">
             <a class="navbar-brand text-black" href="#">
-                <i class="fas fa-map-marker-alt"></i> Bamenda - Sonac
-                Street
+                <i class="fas fa-map-marker-alt"></i> Bamenda - Sonac Street
             </a>
             <a class="navbar-brand text-black" href="mailto:info@ebenezer.com">
                 <i class="fas fa-envelope"></i> info@ebenezer.com
             </a>
-
             <a class="navbar-brand text-black" href="#">
                 <i class="fas fa-phone"></i> +237681610898
             </a>
-
         </div>
     </nav>
+
+
 
     <!-- Logo Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-blue">
