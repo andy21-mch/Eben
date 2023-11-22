@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- Bootstrap JavaScript (bundle includes Popper) -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JavaScript (bundle includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Bootstrap Icons -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="./css/style.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
 
   <title>Ebenezer Higher Institure of Science and Technology</title>
 </head>
@@ -61,8 +56,10 @@
                   labore tenetur iure nemo
                   numquam esse corporis molestias veritatis libero facere.</p>
                 <div class="buttons">
-                  <a href="#courses" class="button-1">Our Programs</a>
-                  <a href="application.php" class="button-2">Apply Now</a>
+                  <a href="#courses" class="btn btn-success btn-lg">Explore
+                    Programs</a>
+                  <a href="application.php" class="btn btn-secondary btn-lg">Apply
+                    Now</a>
                 </div>
               </div>
             </div>
@@ -79,9 +76,12 @@
                   dolorum voluptates vitae suscipit molestiae, ipsam deserunt
                   labore tenetur iure nemo
                   numquam esse corporis molestias veritatis libero facere.</p>
+
                 <div class="buttons">
-                  <a href class="button-1">Our Programs</a>
-                  <a href class="button-2">Apply Now</a>
+                  <a href="#courses" class="btn btn-success btn-lg">Explore
+                    Programs</a>
+                  <a href="application.php" class="btn btn-secondary btn-lg">Apply
+                    Now</a>
                 </div>
               </div>
             </div>
@@ -201,9 +201,9 @@
       </div>
   </section>
 
-  <?php 
+  <?php
 
-  include 'footer.php';  ?>
+  include 'footer.php'; ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

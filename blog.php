@@ -32,19 +32,23 @@ $posts = $blogpost->getAllPosts();
     <!-- Custom CSS -->
 
     <style>
+        /* Default styles for larger screens */
         .fixed-image {
             max-width: 100%;
-            /* Ensures the image doesn't exceed its parent container */
             height: 400px;
-            /* Allows the height to adjust proportionally based on the width */
             width: 400px;
-            /* Set your desired width */
             max-height: 300px;
-            /* Set your maximum desired height */
             object-fit: cover;
-
-
         }
+
+        /* Media query for smaller screens (e.g., phones) */
+        @media (max-width: 767px) {
+            .fixed-image {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
 
 
         .about-content {
@@ -146,11 +150,11 @@ $posts = $blogpost->getAllPosts();
             </div>
 
 
-            <div class="row mt-2 p-5">
+            <div class="row mt-2 p-2">
                 <?php if (count($posts) > 0) {
                     foreach ($posts as $post) { ?>
-                        <div class="col-sm-6 col-md-6 col-lg-4">
-                            <div class="img-container">
+                        <div class="col-sm-6 col-md-6 col-lg-4 ">
+                            <div class="img-container text-center">
                                 <img src="<?php echo 'src/images/' . $post['image']; ?>" class="img-fluid fixed-image">
                             </div>
                             <div class="about-content">

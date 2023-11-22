@@ -28,7 +28,8 @@
     <!-- Logo Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-blue">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="image/logo/logo.png" height="30" width="140%" alt></a>
+            <a class="navbar-brand" href="#"><img src="https://ehist.skye8.tech/image/logo/logo.png" height="30"
+                    width="140%" alt></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar2">
                 <span class="navbar-toggler-icon">
                     <p style="border-bottom: 2px solid #fff;margin-bottom: .4rem;"></p>
